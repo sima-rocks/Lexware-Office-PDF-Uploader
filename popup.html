@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lexware Office Upload</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            width: 280px;
+            margin: 0;
+            padding: 16px;
+            background-color: #ffffff;
+            font-family: var(--font-family);
+        }
+
+        .popup-header {
+            text-align: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--lex-border);
+        }
+
+        .popup-header img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 8px;
+        }
+
+        .popup-header h1 {
+            font-size: 16px;
+            margin: 0;
+            color: var(--lex-text);
+            font-weight: 600;
+        }
+
+        #buttonContainer {
+            margin-bottom: 12px;
+        }
+
+        button {
+            margin-bottom: 8px;
+        }
+
+        #status {
+            font-size: 13px;
+            padding: 8px;
+            border-radius: 4px;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .footer-link {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px solid var(--lex-border);
+        }
+
+        .footer-link a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        .footer-link a:hover {
+            color: var(--lex-green);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup-header">
+        <img src="icon-48.png" alt="Lexware Office PDF Uploader">
+        <h1>Lexware Office PDF Uploader</h1>
+    </div>
+
+    <div id="buttonContainer">
+        <!-- Buttons will be injected here -->
+    </div>
+
+    <div style="text-align: center; margin: 12px 0;">
+        <a href="https://app.lexware.de" target="_blank"
+            style="color: var(--lex-green); text-decoration: none; font-size: 13px; font-weight: 500;">
+            Lexware Office öffnen
+        </a>
+    </div>
+
+    <div id="status"></div>
+
+    <div class="footer-link">
+        <a href="options.html" target="_blank">⚙️ Einstellungen</a>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

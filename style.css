@@ -1,0 +1,133 @@
+:root {
+    --lex-green: #2ea358;
+    --lex-green-hover: #268e4b;
+    --lex-red: #f24b4b;
+    --lex-bg: #f4f5f7;
+    --lex-text: #333333;
+    --lex-border: #e0e0e0;
+    --lex-white: #ffffff;
+    --font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--lex-text);
+    background-color: var(--lex-bg);
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    margin-top: 0;
+}
+
+a {
+    color: var(--lex-green);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background-color: var(--lex-green);
+    color: var(--lex-white);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+button:hover {
+    background-color: var(--lex-green-hover);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+button.secondary {
+    background-color: transparent;
+    color: var(--lex-text);
+    border: 1px solid var(--lex-border);
+}
+
+button.secondary:hover {
+    background-color: #f0f0f0;
+}
+
+/* Inputs */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    border: 1px solid var(--lex-border);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: var(--lex-green);
+    outline: none;
+}
+
+/* Cards/Containers */
+.container {
+    background-color: var(--lex-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* Status Messages */
+.success {
+    color: var(--lex-green);
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.error {
+    color: var(--lex-red);
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--lex-border);
+    padding-bottom: 15px;
+}
+
+.header img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    font-size: 18px;
+    margin: 0;
+    color: var(--lex-text);
+}

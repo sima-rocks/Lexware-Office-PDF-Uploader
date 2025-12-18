@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lexware Office Upload Einstellungen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" style="max-width: 600px;">
+        <div class="header">
+            <img src="icon-48.png" alt="Lexware Office PDF Uploader">
+            <h1>Einstellungen</h1>
+        </div>
+
+        <div style="margin-bottom: 20px; color: #666; line-height: 1.5;">
+            <h3>Über diese Erweiterung</h3>
+            <p>
+                Mit dieser Erweiterung können Sie PDF-Dokumente (z.B. Rechnungen), die Sie im Browser geöffnet haben,
+                direkt in Ihren Lexware Office Account hochladen.
+            </p>
+            <p>
+                Die Dokumente landen automatisch in Ihrem Lexware Office Posteingang.
+                Dort übernimmt die automatische Belegerkennung (OCR) das Auslesen der Daten (Datum, Betrag,
+                Belegnummer).
+            </p>
+        </div>
+
+        <div
+            style="margin-bottom: 30px; padding: 16px; background-color: #f9f9f9; border-radius: 4px; border-left: 4px solid var(--lex-green);">
+            <h3 style="margin-top: 0;">💡 Wie erhalte ich einen API Key?</h3>
+            <p style="margin-bottom: 12px;">Um diese Erweiterung nutzen zu können, benötigen Sie einen Lexware Office
+                API Key. Folgen Sie diesen Schritten:</p>
+
+            <ol style="line-height: 1.8; color: #555;">
+                <li><strong>Einstellungen öffnen:</strong> Klicken Sie in Lexware Office auf das Zahnrad-Symbol (⚙️) und
+                    wählen Sie <strong>"Erweiterungen"</strong></li>
+                <li><strong>Public API aufrufen:</strong> Scrollen Sie nach unten zu "Weitere Apps" und klicken Sie auf
+                    <strong>"Public API"</strong>
+                </li>
+                <li><strong>API-Schlüssel erstellen:</strong> Klicken Sie auf <strong>"+ API-SCHLÜSSEL
+                        ERSTELLEN"</strong></li>
+                <li><strong>Berechtigungen wählen:</strong>
+                    <ul style="margin-top: 8px; color: #666;">
+                        <li><em>Empfohlen:</em> Wählen Sie <strong>"Schlüssel mit individuellen Berechtigungen"</strong>
+                            und aktivieren Sie nur <strong>"Belegbilder hochladen"</strong></li>
+                        <li><em>Alternativ:</em> "Schlüssel mit allen Berechtigungen" (weniger sicher)</li>
+                    </ul>
+                </li>
+                <li><strong>Name & Ablaufdatum:</strong> Geben Sie dem Schlüssel einen Namen (z.B. "Browser Extension")
+                    und setzen Sie optional ein Ablaufdatum</li>
+                <li><strong>Schlüssel kopieren:</strong> Kopieren Sie den erstellten API Key und fügen Sie ihn unten ein
+                </li>
+            </ol>
+
+            <div
+                style="margin-top: 16px; padding: 12px; background-color: #fff3cd; border-radius: 4px; font-size: 13px;">
+                ⚠️ <strong>Wichtig:</strong> Bewahren Sie Ihren API Key sicher auf. Er kann nicht erneut angezeigt
+                werden.
+            </div>
+        </div>
+
+        <h3>Profile verwalten</h3>
+        <div id="profilesList"></div>
+
+        <h3>Neues Profil hinzufügen</h3>
+        <div>
+            <label for="profileName">Name (z.B. Firmenname):</label>
+            <input type="text" id="profileName" placeholder="Mein Unternehmen">
+
+            <label for="apiKey">API Key:</label>
+            <input type="password" id="apiKey" placeholder="Ihr Lexware Office API Key">
+
+            <button id="addProfile">Profil hinzufügen</button>
+        </div>
+
+        <div id="status"></div>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>
